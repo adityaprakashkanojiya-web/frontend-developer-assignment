@@ -92,8 +92,8 @@ export default function SearchAndFilter({ onSearch, onFilter, categories, select
             className="flex items-center space-x-2 px-4 py-3 bg-white border border-secondary-200 rounded-lg hover:bg-secondary-50 transition-colors duration-200"
             suppressHydrationWarning
             aria-label={`Filter products by category. Currently selected: ${selectedCategory || 'All products'}`}
-            aria-expanded={isFilterOpen.toString()}
-            aria-haspopup="true"
+            aria-expanded={isFilterOpen}
+            aria-haspopup="listbox"
             aria-controls="filter-dropdown"
           >
             <Filter className="w-5 h-5 text-secondary-600" aria-hidden="true" />
@@ -111,7 +111,7 @@ export default function SearchAndFilter({ onSearch, onFilter, categories, select
               ref={filterDropdownRef}
               id="filter-dropdown"
               className="absolute right-0 top-full mt-2 w-48 bg-white border border-secondary-200 rounded-lg shadow-lg z-10"
-              role="menu"
+              role="listbox"
               aria-label="Product categories"
               onKeyDown={handleFilterKeyDown}
             >
@@ -127,9 +127,9 @@ export default function SearchAndFilter({ onSearch, onFilter, categories, select
                       : 'text-secondary-700 hover:bg-secondary-50'
                   }`}
                   suppressHydrationWarning
-                  role="menuitem"
+                  role="option"
                   aria-label="Show all products"
-                  aria-checked={(selectedCategory === '').toString()}
+                  aria-selected={selectedCategory === ''}
                 >
                   All Products
                 </button>
@@ -143,9 +143,9 @@ export default function SearchAndFilter({ onSearch, onFilter, categories, select
                         : 'text-secondary-700 hover:bg-secondary-50'
                     }`}
                     suppressHydrationWarning
-                    role="menuitem"
+                    role="option"
                     aria-label={`Filter by ${category} category`}
-                    aria-checked={(selectedCategory === category).toString()}
+                    aria-selected={selectedCategory === category}
                   >
                     {category}
                   </button>
