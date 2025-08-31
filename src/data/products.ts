@@ -4,7 +4,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: "Hedamo Organic Wild Honey",
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=800&h=600&fit=crop",
+    image: "/honey.webp",
     category: "Organic Food",
     description: "Pure wild honey harvested from pristine organic farms, rich in natural enzymes and antioxidants. This premium honey is collected from wildflower sources, ensuring a unique flavor profile and maximum nutritional benefits.",
     shortDescription: "Pure wild honey from organic farms with rich natural enzymes",
@@ -173,7 +173,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Hedamo Artisan Sea Salt",
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
+    image: "/Sea-salt.webp",
     category: "Artisan Salt",
     description: "Hand-harvested sea salt from pristine coastal waters, naturally evaporated and minimally processed. This artisan salt features a delicate crystal structure and rich mineral content that enhances any dish.",
     shortDescription: "Hand-harvested sea salt with delicate crystals and rich minerals",
